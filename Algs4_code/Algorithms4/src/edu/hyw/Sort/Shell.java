@@ -18,18 +18,13 @@ public class Shell {
 		int h = 1;
 		while ( h < N/3) h = 3*h + 1;
 		while ( h >= 1) {
-			StdOut.println("h = " + h);
+			//StdOut.println("h = " + h);
 			for (int i = h; i < N; i++) {
 				for (int j = i; j >=h &&less(a[j], a[j-h]); j -=h) {
 					//StdOut.println("i, j=" + i + "," + j);
 					exch(a, j, j-h);
-					Shell.show(a); 
-					StdDraw.show(); 
-					//StdDraw.pause(1000);
-					StdDraw.enableDoubleBuffering();  
-					StdDraw.clear();
+					//Change(a);
 				}
-					
 			}
 			h = h/3;
 		}
@@ -67,6 +62,15 @@ public class Shell {
 		for (int i = 0; i < a.length; i++) 
 			StdOut.print(a[i] + " ");
 		StdOut.println();
+	}
+	
+	public static void Change (Comparable[] a){
+		//¶¯Ì¬Í¼Ïñ
+		show(a); 
+		StdDraw.show(); 
+		//StdDraw.pause(1000);
+		StdDraw.enableDoubleBuffering();  
+		StdDraw.clear();
 	}
 	
 	public static boolean isSorted(Comparable[] a) {

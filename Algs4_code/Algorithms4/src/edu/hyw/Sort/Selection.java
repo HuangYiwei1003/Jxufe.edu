@@ -20,11 +20,7 @@ public class Selection {
 			for (int j = i+2; j < N; j++)
 				if(less(a[j], a[min])) min = j;
 			exch(a, i ,min);
-			Shell.show(a); 
-			StdDraw.show(); 
-			//StdDraw.pause(1000);
-			StdDraw.enableDoubleBuffering();  
-			StdDraw.clear();
+			//Change(a);
 		}
 	}
 	
@@ -52,6 +48,15 @@ public class Selection {
             //x 代表线在那个位置  y代表这个线的高度
             // rw rh 理解成平面坐标参数
 		}
+	}
+	
+	public static void Change (Comparable[] a){
+		//动态图像
+		show(a); 
+		StdDraw.show(); 
+		//StdDraw.pause(1000);
+		StdDraw.enableDoubleBuffering();  
+		StdDraw.clear();
 	}
 	
 	public static boolean isSorted(Comparable[] a) {

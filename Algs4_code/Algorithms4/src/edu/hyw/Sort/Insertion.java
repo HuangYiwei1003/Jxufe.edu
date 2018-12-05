@@ -18,11 +18,7 @@ public class Insertion {
 		for (int i = 1; i < N; i++) {
 			for(int j = i; j > 0 && less(a[j], a[j-1]); j--) {
 				exch(a, j, j-1);
-				Shell.show(a); 
-				StdDraw.show(); 
-				//StdDraw.pause(1000);
-				StdDraw.enableDoubleBuffering();  
-				StdDraw.clear();
+				//Change(a);
 			}
 		}
 	}
@@ -49,6 +45,15 @@ public class Insertion {
 			double rh = (double)a[i] / 2.0;
 			StdDraw.filledRectangle(x, y, rw, rh);
 		}
+	}
+	
+	public static void Change (Comparable[] a){
+		//¶¯Ì¬Í¼Ïñ
+		show(a); 
+		StdDraw.show(); 
+		//StdDraw.pause(1000);
+		StdDraw.enableDoubleBuffering();  
+		StdDraw.clear();
 	}
 	
 	public static boolean isSorted(Comparable[] a) {
