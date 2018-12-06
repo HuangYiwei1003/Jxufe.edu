@@ -5,6 +5,7 @@ import java.util.Random;
 
 import edu.hyw.Sort.Insertion;
 import edu.hyw.Sort.Merge;
+import edu.hyw.Sort.Quick;
 import edu.hyw.Sort.Selection;
 import edu.hyw.Sort.Shell;
 import edu.princeton.cs.algs4.StdDraw;
@@ -49,8 +50,8 @@ public class SortTest {
 	
 	public static void main(String[] args) {
 			int N = Integer.parseInt(args[0]);
-			int T = Integer.parseInt(args[1]);   
-			String[] algs = {"Shell", "Merge", "Selection", "Insertion"};
+			//int T = Integer.parseInt(args[1]);   
+			//String[] algs = {"Shell", "Merge", "Selection", "Insertion"};
 			/*Double[] times = new Double[algs.length];
 			StdOut.printf("For %d random Doubles\n", N);
 			for (int i = 0; i < algs.length; i++) {
@@ -58,15 +59,19 @@ public class SortTest {
 				times[i] = timeRandomInput(algs[i], N, T);
 				StdOut.printf("%s spend %.2f ms\n", algs[i], times[i]*100);
 			}*/
-			 StdDraw.setXscale(0,N);
+			 /*StdDraw.setXscale(0,N);
 		     StdDraw.setYscale(0,10);
 		     StdDraw.setPenRadius(.01);
 		     Color[] colors = {Color.BLUE, Color.red, Color.GREEN, Color.black};
 			for(int j = 0; j < algs.length; j++) {
 				StdDraw.setPenColor(colors[j]);
 				timePaint(algs[j], N, T);
-			}
-					
+			}*/
+			Double[] a = new Double[N];
+			for (int i = 0; i < N;  i++)
+				a[i] = StdRandom.uniform();
+			Quick.sort(a);
+			Quick.Allshow(a);
 	}
 	
 	
