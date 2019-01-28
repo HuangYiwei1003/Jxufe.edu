@@ -52,6 +52,7 @@ public class Bag<Item> implements Iterable<Item> {
 				public String toString() {
 					String item = current.item.toString();
 					return item;
+					
 				}
 	}
 }
